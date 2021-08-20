@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>饮食消费添加界面</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        document.getElementById("others").value="备注内容默认为空"
+    </script>
+</head>
+<body>
+<h2>饮食消费添加界面</h2>
+<form name="insert" action="control.php" method="post">
+    请选择就餐的时间
+    <br/>
+    <input type="date" name="day">
+    <select>
+        <option name="time" value="morning">早晨</option>
+        <option name="time" value="noon">中午</option>
+        <option name="time" value="evening">夜晚</option>
+    </select>
+    <br/>
+    请选择消费的地点
+    <br/>
+    <input type="radio" name="place" value="company">公司
+    <input type="radio" name="place" value="outside">外边
+    <br/>
+    请输入消费的数字
+    <br/>
+    <input type="number" name="money">元
+    <br/>
+    备注
+    <br/>
+    <textarea rows="10" cols="30" name="others" ></textarea>
+    <br/>
+    <input type="submit" value="提交">
+</form>
+<a href="edit.html">返回上一级</a>
+<a href="index.html">首页</a>
+</body>
+</html>

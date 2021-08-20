@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>饮食消费修改界面</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        document.getElementById("others").value="备注内容默认为空"
+    </script>
+</head>
+<body>
+<h2>饮食消费修改界面</h2>
+<form name="insert" action="control.php" method="post">
+    请选择修改记录的时间
+    <br/>
+    <input type="date" name="day">
+    <select>
+        <option name="time" value="morning">早晨</option>
+        <option name="time" value="noon">中午</option>
+        <option name="time" value="evening">夜晚</option>
+    </select>
+    <br/>
+    勾选要修改的记录
+    <input type="checkbox" name="items" value="place">就餐地点
+    <input type="checkbox" name="items" value="money">就餐金额
+    <input type="checkbox" name="items" value="others">备注内容
+    <input type="checkbox" name="items" value="all">全选
+    <br/>
+    请选择修改后的地点
+    <br/>
+    <input type="radio" name="place" value="company">公司
+    <input type="radio" name="place" value="outside">外边
+    <br/>
+    请输入修改后的数字
+    <br/>
+    <input type="number" name="money">元
+    <br/>
+    新的备注
+    <br/>
+    <textarea rows="10" cols="30" name="others" ></textarea>
+    <br/>
+    <input type="submit" value="提交">
+</form>
+<a href="edit.html">返回上一级</a>
+<a href="index.html">首页</a>
+</body>
+</html>
