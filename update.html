@@ -7,6 +7,26 @@
     <script>
         document.getElementById("others").value="备注内容默认为空"
     </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#check_p").change(function (){
+                $("#div_p").slideToggle();
+            });
+            $("#check_m").change(function (){
+                $("#div_m").slideToggle();
+            });
+            $("#check_o").change(function (){
+                $("#div_o").slideToggle();
+            });
+            $("#check_a").change(function (){
+                $("#div_p").slideToggle();
+                $("#div_m").slideToggle();
+                $("#div_o").slideToggle();
+            });
+        });
+    </script>
 </head>
 <body>
 <h2>饮食消费修改界面</h2>
@@ -21,24 +41,29 @@
     </select>
     <br/>
     勾选要修改的记录
-    <input type="checkbox" name="items" value="place">就餐地点
-    <input type="checkbox" name="items" value="money">就餐金额
-    <input type="checkbox" name="items" value="others">备注内容
-    <input type="checkbox" name="items" value="all">全选
+    <input id="check_p" type="checkbox" name="items" value="place">就餐地点
+    <input id="check_m" type="checkbox" name="items" value="money">就餐金额
+    <input id="check_o" type="checkbox" name="items" value="others">备注内容
+    <input id="check_a" type="checkbox" name="items" value="all">全选
     <br/>
-    请选择修改后的地点
-    <br/>
-    <input type="radio" name="place" value="company">公司
-    <input type="radio" name="place" value="outside">外边
-    <br/>
-    请输入修改后的数字
-    <br/>
-    <input type="number" name="money">元
-    <br/>
-    新的备注
-    <br/>
-    <textarea rows="10" cols="30" name="others" ></textarea>
-    <br/>
+    <div class="update_block" id="div_p">
+        请选择修改后的地点
+        <br/>
+        <input type="radio" name="place" value="company">公司
+        <input type="radio" name="place" value="outside">外边
+    </div>
+    <div class="update_block" id="div_m">
+        请输入修改后的数字
+        <br/>
+        <input type="number" name="money">元
+    </div>
+
+    <div class="update_block" id="div_o">
+        新的备注
+        <br/>
+        <textarea rows="10" cols="30" name="others" ></textarea>
+    </div>
+
     <input type="submit" value="提交">
 </form>
 <a href="edit.html">返回上一级</a>
