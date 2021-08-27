@@ -9,14 +9,14 @@
 </head>
 <body>
 <h2>饮食消费删除界面</h2>
-<form name="insert" action="insert.php" method="post">
+<form name="delete" action="delete.php" method="post">
     请选择删除记录的时间
     <br/>
     <input type="date" name="day">
-    <select>
-        <option name="time" value="morning">早晨</option>
-        <option name="time" value="noon">中午</option>
-        <option name="time" value="evening">夜晚</option>
+    <select name="time">
+        <option value="morning">早晨</option>
+        <option value="noon">中午</option>
+        <option value="evening">夜晚</option>
     </select>
     <br/>
     <input type="submit" value="提交">
