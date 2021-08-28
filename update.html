@@ -30,14 +30,14 @@
 </head>
 <body>
 <h2>饮食消费修改界面</h2>
-<form name="insert" action="insert.php" method="post">
+<form name="update" action="update.php" method="post">
     请选择修改记录的时间
     <br/>
     <input type="date" name="day">
-    <select>
-        <option name="time" value="morning">早晨</option>
-        <option name="time" value="noon">中午</option>
-        <option name="time" value="evening">夜晚</option>
+    <select name="time">
+        <option value="morning">早晨</option>
+        <option value="noon">中午</option>
+        <option value="evening">夜晚</option>
     </select>
     <br/>
     勾选要修改的记录
@@ -55,7 +55,7 @@
     <div class="update_block" id="div_m">
         请输入修改后的数字
         <br/>
-        <input type="number" name="money">元
+        <input type="number" step="0.01" name="money">元
     </div>
 
     <div class="update_block" id="div_o">
